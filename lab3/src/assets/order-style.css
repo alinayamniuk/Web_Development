@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  background-color: #F2F3EB;
+}
+
+.form {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-form {
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  width: 40%;
+  border: 2px solid #474544;
+}
+.container-form .another {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-form .near {
+  display: flex;
+  flex-direction: row;
+}
+.container-form .another input {
+  color: #474544;
+  border: none;
+  border-bottom: 2px solid #474544;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  background: none;
+  width: 313px;
+  padding: 10px;
+  margin: 5px;
+}
+.container-form .near input {
+  color: #474544;
+  border: none;
+  border-bottom: 2px solid #474544;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  background: none;
+  padding: 10px;
+  margin: 5px;
+  width: 150px;
+}
+.container-form input[type=submit] {
+  cursor: pointer;
+  color: #474544;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  background: none;
+  padding: 10px;
+  margin: 25px 5px;
+  width: 150px;
+  border: 2px solid #474544;
+  transition: 0.3s;
+}
+.container-form button[type=button] {
+  cursor: pointer;
+  color: #474544;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  background: none;
+  padding: 10px;
+  margin: 25px 5px;
+  width: 150px;
+  border: 2px solid #474544;
+  transition: 0.3s;
+}
+.container-form input[type=submit]:hover {
+  color: #F2F3EB;
+  background-color: #474544;
+}
+.container-form .order {
+  margin-top: -5%;
+  margin-bottom: 10%;
+  text-align: center;
+}
+.container-form .order h1 {
+  letter-spacing: 7px;
+  color: #474544;
+  text-transform: uppercase;
+}
+.container-form .order i {
+  color: #474544;
+  font-size: 25px;
+  margin: 5px 15px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+::placeholder {
+  color: #474544;
+}
+
+@media only screen and (max-width: 800px) {
+  .container-form {
+    border: none;
+  }
+}
+
+.margin-bottom {
+  margin-bottom: 10px;
+}
+
+
+.confirm-order{
+  transition: .7s cubic-bezier(.25,.1,.89,.41);
+  transform: translateY(-700px);
+  position: absolute;
+  background-color: #474544;
+  padding: 20px;
+  text-align: center;
+  width: 50%;
+  color: #F2F3EB;
+  border: 2px solid #F2F3EB;
+}
+
+.select-custom {
+  width: 310px;
+  height: 34px;
+  background: none;
+  margin: 6px;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid;
+  border-left: 0;
+}
+
+select::-ms-expand {  display: none; }
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.change{
+  transform: translateY(0px);
+}
+
+.animate{
+  animation: bounce;
+  animation-duration: 2s;
+  animation-delay: .1s;
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+.confirm-order h1{
+  text-transform: uppercase;
+  padding-bottom: 30px;
+}
+
+
+
+.buttons button{
+  cursor: pointer;
+  color: #F2F3EB;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  background: none;
+  padding: 10px;
+  margin: 25px 5px;
+  width: 150px;
+  border: 2px solid #F2F3EB;
+  transition: 0.3s;
+}
+
+.buttons button:hover{
+  background-color: #F2F3EB;
+  color: #474544;
+}
