@@ -1,0 +1,48 @@
+.services {
+  display: flex;
+  flex-direction: row;
+}
+.services h1, .services h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+.services p {
+  text-align: center;
+}
+.services div {
+  position: relative;
+  flex: 20%;
+  padding: 5px;
+}
+.services div a img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+.prices {
+  border: 2px solid pink;
+  padding: 5px 30px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prices {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=face-factory-style.css.map */

@@ -1,0 +1,48 @@
+.services-nail {
+  display: flex;
+  justify-content: space-around;
+}
+.services-nail h1, .services-nail h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+.services-nail p {
+  text-align: center;
+}
+.services-nail div {
+  position: relative;
+  flex: 20%;
+  padding: 0 10px;
+}
+.services-nail div img {
+  width: 50%;
+  height: auto;
+  vertical-align: middle;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+.prices {
+  border: 2px solid pink;
+  padding: 5px 30px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .services-nail {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prices {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=nail-factory-style.css.map */
