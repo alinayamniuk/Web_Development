@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beauty</title>
+    <link rel="stylesheet" href="{% static 'сss/order-style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body onload="refreshFields()">
+<div class="form">
+{#    {% csrf_token %}#}
+    <div class="container-form">
+        <form id="order-form">
+            <div class="order">
+                <h1>Your order</h1>
+                <i class="money fas fa-money-check-alt"></i>
+            </div>
+            <div class="near">
+                <input id="fname" name="fname" type="text" placeholder="First name" class="near-input">
+                <input id="lname" name="lname" type="text" placeholder="Last name" class="near-input">
+            </div>
+            <div class="another">
+                <input id="checkdatefield" type="date" style="display: none">
+                <input id="phone" name="phone" placeholder="Phone" autocomplete="off">
+                <input id ="datefield" type="date" name="date" placeholder="Date" min='2020-05-01'
+                       onblur="availableMasters('../api/available_masters')">
+                <select class="select-custom" id="service" name="service">
+                    <option value="0" disabled selected hidden>Service</option>
+					<option value="1">Макіяж</option>
+					<option value="2">Зачіска</option>
+					<option value="3">Манікюр</option>
+                </select>
+                <select class="select-custom" disabled id="master" name="master" onchange="availableHours(
+                    '../api/available_hours')">
+                    <option value="0" disabled selected hidden>Master</option>
+                </select>
+                <select class="select-custom" id="time" name="time" disabled>
+                    <option value="0" disabled selected hidden>Time</option>
+					<option value="14">14:00</option>
+                </select>
+                <input id="price" name="price" type="text" readonly hidden>
+            </div>
+            <button type="button" value="Send" onclick="tryConfirm()">Send</button>
+        </form>
+    </div>
+	<div class="confirm-order">
+		<h1>Confirm order</h1>
+		<p id="master_confirm">Master: IGOR HUI</p>
+		<p id="service_confirm">Service: IGOR VSEODO HUi</p>
+		<p id="price_confirm">Price: haliava</p>
+		<p id="date_confirm">Date: all time</p>
+		<p id="time_confirm">Time: all time</p>
+		<div class="buttons">
+			<button type="button" onclick="postSubmit()">Confirm</button>
+			<button>Cancel</button>
+		</div>
+	</div>
+</div>
+
+</body>
+
+<script src="{% static 'scripts/order_script.js' %}"></script>
+</html>

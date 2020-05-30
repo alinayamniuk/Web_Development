@@ -1,0 +1,57 @@
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+p {
+  text-align: center;
+}
+
+.salon {
+  display: flex;
+}
+.salon img {
+  width: 50%;
+  height: auto;
+}
+.salon .text {
+  text-align: center;
+  width: 50%;
+}
+.salon a {
+  text-align: center;
+}
+
+.salon-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.salon-reverse img {
+  width: 50%;
+  height: auto;
+}
+.salon-reverse .text {
+  text-align: center;
+  width: 50%;
+}
+.salon-reverse a {
+  text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .salon, .salon-reverse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .salon .text, .salon-reverse .text {
+    width: 100%;
+  }
+  .salon img, .salon-reverse img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=contact-style.css.map */
